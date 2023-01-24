@@ -10,6 +10,8 @@ public class RockTest {
     public void test_is_a_Rock () {
         Rock rock = new Rock();
         assertTrue(rock instanceof Rock);
-        assertEquals(expected: "Rock", rock, getType());
+        assertEquals( "Rock", rock.getType());
     }
+
+   
 }
