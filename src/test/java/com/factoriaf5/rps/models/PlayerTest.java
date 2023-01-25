@@ -25,7 +25,7 @@ public class PlayerTest {
     }
     @Test 
     public void test_Player_can_choose_Paper() {
-        Figure paper = player1.choose(String "Paper");
+        Figure paper = player1.choose( "Paper");
         assertTrue(paper instanceof Paper);
         assertEquals("Paper", paper.getType());
     }

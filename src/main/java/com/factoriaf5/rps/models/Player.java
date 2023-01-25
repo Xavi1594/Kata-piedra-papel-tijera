@@ -6,7 +6,13 @@ public class Player {
      if (string == "Rock") {
         return new Rock();
      }
-     return null;
+     if (string == "Paper") {
+        return new Paper();
     }
+    if (string == "Scissors") {
+        return new Scissors();
 
+}
+return null;
+    }
 }
