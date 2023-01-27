@@ -29,4 +29,10 @@ public class PlayerTest {
         assertTrue(paper instanceof Paper);
         assertEquals("Paper", paper.getType());
     }
+    @Test 
+    public void test_Player_can_choose_Scissors() {
+        Figure scissors = player1.choose( "Scissors");
+        assertTrue(scissors instanceof Scissors);
+        assertEquals("Scissors", scissors.getType());
+    }
 }
