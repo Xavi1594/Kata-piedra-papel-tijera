@@ -1,21 +1,40 @@
 package com.factoriaf5.rps.application;
-
+import com.factoriaf5.rps.models.Figure;
 import com.factoriaf5.rps.models.Player;
+
 
 public class Game {
 
-<<<<<<< HEAD
-    public Game() {
-        
-    }
-     
-=======
-    Player player1;
-    Player player2;
+    private Player player1;
+    private Player player2;
 
     public Game(Player player1, Player player2) {
         this.player1 = player1;
         this.player2 = player2;
+    }
+
+    public String whoWin(Figure figure1, Figure figure2) {
+        if (figure1.getType().equals(figure2.getType())) {
+            return "players draws using " + figure1.getType() + " vs " + figure2.getType();
+        } else if (figure1.getType().equals("Rock")) {
+            if (figure2.getType().equals("Scissors")) {
+                return "player1 wins using " + figure1.getType() + " vs " + figure2.getType();
+            } else {
+                return "player2 wins using " + figure2.getType() + " vs " + figure1.getType();
+            }
+        } else if (figure1.getType().equals("Paper")) {
+            if (figure2.getType().equals("Rock")) {
+                return "player1 wins using " + figure1.getType() + " vs " + figure2.getType();
+            } else {
+                return "player2 wins using " + figure2.getType() + " vs " + figure1.getType();
+            }
+        } else { // Scissors
+            if (figure2.getType().equals("Paper")) {
+                return "player1 wins using " + figure1.getType() + " vs " + figure2.getType();
+            } else {
+                return "player2 wins using " + figure2.getType() + " vs " + figure1.getType();
+            }
+        }
     }
 
     public Player getPlayer1() {
@@ -26,9 +45,11 @@ public class Game {
         return player2;
     }
 
-    public String checkWinner() {
-        return null;
+    public void setPlayer1(Player player1) {
+        this.player1 = player1;
     }
 
->>>>>>> 2a7552ce60fb4193a337f3c70c4afe3f3974647d
+    public void setPlayer2(Player player2) {
+        this.player2 = player2;
+    }
 }

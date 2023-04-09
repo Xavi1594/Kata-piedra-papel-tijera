@@ -5,7 +5,7 @@ public class Rock extends Figure {
     private final String type;
 
     public Rock () {
-        this.type = "Rock";
+        this.type = "rock";
     }
     public Object getType() {
 

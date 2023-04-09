@@ -6,7 +6,7 @@ public class Paper extends Figure {
 
 
     public Paper() {
-        this.type = "Paper";
+        this.type = "paper";
     }
     public Object getType() {
         return type;

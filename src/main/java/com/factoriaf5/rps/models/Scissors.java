@@ -6,7 +6,7 @@ public class Scissors extends Figure {
 
 
     public  Scissors() {
-        this.type = "Scissors";
+        this.type = "scissors";
     }
     public Object getType() {
         return type;
